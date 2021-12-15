@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Students;
+use App\Terms;
 
 class StudentMark extends Model
 {
@@ -24,5 +25,13 @@ class StudentMark extends Model
     public function studentData()
     {
         return $this->hasOne(Students::class, 'id', 'student_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function term()
+    {
+        return $this->hasOne(Terms::class, 'id', 'term_id');
     }
 }

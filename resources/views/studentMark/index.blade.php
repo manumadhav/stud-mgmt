@@ -42,7 +42,7 @@
             <td>{{ $student->maths }}</td>
             <td>{{ $student->science }}</td>
             <td>{{ $student->history }}</td>
-            <td>{{ $student->term }}</td>
+            <td>{{ $student->term->name }}</td>
             <td>{{ $student->total_mark }}</td>
             <td>
                 <div class="dropdown">
