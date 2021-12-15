@@ -16,10 +16,11 @@
 </head>
 
 <body>
-<div class="container w-50 mt-5">
+<div class="container mt-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('students.index') }}">Home</a></li>
+            <li class=""><a href="{{ route('students.index') }}">Student&nbsp;</a></li>
+            <li class=""><a href="{{ route('studentMark.index') }}">&nbsp;&nbsp;&nbsp;Student Marks</a></li>
 {{--            <li class="breadcrumb-item"><a href="{{ route('products.create') }}">Create</a></li>--}}
             {{-- <li class="breadcrumb-item active" aria-current="page">Data</li> --}}
         </ol>

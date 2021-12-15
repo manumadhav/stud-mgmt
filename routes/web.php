@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('students' , StudentsController::class);
+Route::resource('studentMark' , StudentMarkController::class);

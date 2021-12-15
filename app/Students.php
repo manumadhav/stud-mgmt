@@ -18,8 +18,12 @@ class Students extends Model
         'name', 'age', 'gender', 'reporting_teacher_id'
     ];
 
-    public function teacher(){
-        return $this->hasOne(Teachers::class, 'id');
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function teacher()
+    {
+        return $this->hasOne(Teachers::class, 'id', 'reporting_teacher_id');
     }
 
 }

@@ -21,10 +21,13 @@
 
         <input type="number" name="age" class="form-control mb-3" placeholder="Age"/>
 
-        <input type="number" name="gender" class="form-control mb-3" placeholder="Gender"/>
+        <select class="form-control  mb-3" name="gender" placeholder="Gender">
+            <option value="M" >M</option>
+            <option value="F" >F</option>
+        </select>
 
         <div class="col-sm-12 mb-3">
-            <select class="form-control" id="selectUser" name="teacher_selected" required focus>
+            <select class="form-control" id="selectUser" name="reporting_teacher_id" required focus>
                 <option value="" disabled selected>Please select reporting teacher</option>
                 @foreach($teachers as $teacher)
                     <option value="{{$teacher->id}}">{{ $teacher->name }}</option>
