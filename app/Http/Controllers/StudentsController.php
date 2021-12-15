@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Students;
+use App\Teachers;
 use Illuminate\Http\Request;
 
 class StudentsController extends Controller
@@ -14,7 +15,8 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        //
+        $students = Students::latest()->get();
+        return view('students.index', compact('students'));
     }
 
     /**
@@ -24,7 +26,8 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
+        $teachers = Teachers::all();
+        return view('students.create',compact('teachers'));
     }
 
     /**
@@ -35,18 +38,19 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Students  $students
+     * @param  \App\Students  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Students $students)
+    public function show(Students $student)
     {
-        //
+        return view('students.show', ['student' =>  $student]);
     }
 
     /**
@@ -80,6 +84,6 @@ class StudentsController extends Controller
      */
     public function destroy(Students $students)
     {
-        //
+        dd('delete');
     }
 }

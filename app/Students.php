@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use \App\Teachers;
 
 class Students extends Model
 {
@@ -16,4 +17,9 @@ class Students extends Model
     protected $fillable = [
         'name', 'age', 'gender', 'reporting_teacher_id'
     ];
+
+    public function teacher(){
+        return $this->hasOne(Teachers::class, 'id');
+    }
+
 }
