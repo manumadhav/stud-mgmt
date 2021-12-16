@@ -18,13 +18,14 @@
     <form action="{{ route('students.update', $student->id) }}" method="post">
         @csrf
         @method('put')
-        <input type="text" name="name" class="form-control mb-3" placeholder="Student Name" value="{{ $student->name }}"/>
+        <input type="text" name="name" class="form-control mb-3" placeholder="Student Name"
+               value="{{ $student->name }}"/>
 
-        <input type="number" name="age" class="form-control mb-3" placeholder="Age" value="{{ $student->age }}" />
+        <input type="number" name="age" class="form-control mb-3" placeholder="Age" value="{{ $student->age }}"/>
 
         <select class="form-control mb-3" name="gender" placeholder="Gender">
             <option value="M" {{ old('name',$student->gender)=='M' ? 'selected' : ''  }}>M</option>
-            <option value="F"  {{ old('name',$student->gender)=='F' ? 'selected' : ''  }}>F</option>
+            <option value="F" {{ old('name',$student->gender)=='F' ? 'selected' : ''  }}>F</option>
         </select>
 
         <div class="col-sm-12 mb-3">

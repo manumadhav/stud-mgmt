@@ -22,8 +22,8 @@
         <input type="number" name="age" class="form-control mb-3" placeholder="Age"/>
 
         <select class="form-control  mb-3" name="gender" placeholder="Gender">
-            <option value="M" >M</option>
-            <option value="F" >F</option>
+            <option value="M">M</option>
+            <option value="F">F</option>
         </select>
 
         <div class="col-sm-12 mb-3">

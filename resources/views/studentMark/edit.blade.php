@@ -28,11 +28,14 @@
             </select>
         </div>
 
-        <input type="number" min="0" name="maths" class="form-control mb-3" placeholder="Enter maths mark" value="{{ $studentMark->maths }}" />
+        <input type="number" min="0" name="maths" class="form-control mb-3" placeholder="Enter maths mark"
+               value="{{ $studentMark->maths }}"/>
 
-        <input type="number" min="0" name="science" class="form-control mb-3" placeholder="Enter science mark" value="{{ $studentMark->science }}" />
+        <input type="number" min="0" name="science" class="form-control mb-3" placeholder="Enter science mark"
+               value="{{ $studentMark->science }}"/>
 
-        <input type="number" min="0" name="history" class="form-control mb-3" placeholder="Enter history mark" value="{{ $studentMark->history }}" />
+        <input type="number" min="0" name="history" class="form-control mb-3" placeholder="Enter history mark"
+               value="{{ $studentMark->history }}"/>
 
         <div class="col-sm-12 mb-3">
             <select class="form-control" id="selectUser" name="term_id" required focus>

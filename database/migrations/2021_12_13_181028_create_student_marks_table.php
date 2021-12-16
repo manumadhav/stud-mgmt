@@ -36,6 +36,10 @@ class CreateStudentMarksTable extends Migration
      */
     public function down()
     {
+        Schema::table('student_marks', function (Blueprint $table) {
+            $table->dropForeign('student_id');
+            $table->dropForeign('term_id');
+        });
         Schema::dropIfExists('student_marks');
     }
 }

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <h2>Student CRUD</h2>
+                <h2>Student Details</h2>
             </div>
             <div class="col-xs-6">
                 <a class="btn btn-success float-end" href="{{ route('students.create') }}">Create Student</a>
@@ -35,7 +35,7 @@
 
         @foreach ($students as $student) {{-- Loop students --}}
         <tr>
-{{--            <th scope="row">{{ $loop->iteration }}</th>--}}
+            {{--            <th scope="row">{{ $loop->iteration }}</th>--}}
             <th scope="row">{{ $student->id }}</th>
             <td>{{ $student->name }}</td>
             <td>{{ $student->age }}</td>

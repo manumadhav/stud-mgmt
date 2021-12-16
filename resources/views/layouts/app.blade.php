@@ -18,9 +18,9 @@
 <body>
 <div class="container mt-5">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class=""><a href="{{ route('students.index') }}">Student&nbsp;</a></li>
-            <li class=""><a href="{{ route('studentMark.index') }}">&nbsp;&nbsp;&nbsp;Student Marks</a></li>
+        <ol class="breadcrumb" style="border: 1px solid black;list-style-position: inside;">
+            <li class=""><a href="{{ route('students.index') }}"  style="color: darkcyan"><b>Student&nbsp;</b></a></li>
+            <li class=""><a href="{{ route('studentMark.index') }}" style="color: darkcyan"><b>&nbsp;&nbsp;&nbsp;Student Marks</b></a></li>
 {{--            <li class="breadcrumb-item"><a href="{{ route('products.create') }}">Create</a></li>--}}
             {{-- <li class="breadcrumb-item active" aria-current="page">Data</li> --}}
         </ol>

@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', 'StudentsController@index')->name('home');
+
 Route::resource('students' , StudentsController::class);
 Route::resource('studentMark' , StudentMarkController::class);

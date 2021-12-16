@@ -4,10 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <h2>Student Mark Details CRUD</h2>
+                <h2>Student Mark Details</h2>
             </div>
             <div class="col-xs-6">
-                <a class="btn btn-success float-end" href="{{ route('studentMark.create') }}">Create Student Mark Details</a>
+                <a class="btn btn-success float-end" href="{{ route('studentMark.create') }}">Create Student Mark
+                    Details</a>
             </div>
         </div>
     </div>
