@@ -31,6 +31,7 @@
             <th scope="col">History</th>
             <th scope="col">Term</th>
             <th scope="col">Total Mark</th>
+            <th scope="col">Created On</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
@@ -45,6 +46,7 @@
             <td>{{ $student->history }}</td>
             <td>{{ $student->term->name }}</td>
             <td>{{ $student->total_mark }}</td>
+            <td>{{ $student->created_at->format('M d,Y h:i A') }}</td>
             <td>
                 <div class="dropdown">
                     <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"

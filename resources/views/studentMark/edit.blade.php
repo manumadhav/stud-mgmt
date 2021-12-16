@@ -18,6 +18,7 @@
     <form action="{{ route('studentMark.update', $studentMark->id) }}" method="post">
         @csrf
         @method('put')
+        <label>Student Name : </label>
         <div class="col-sm-12 mb-3">
             <select class="form-control" id="selectUser" name="student_id" required focus disabled>
                 <option value="" disabled selected>Please select student</option>
@@ -27,16 +28,16 @@
                 @endforeach
             </select>
         </div>
-
+        <label>Enter maths mark : </label>
         <input type="number" min="0" name="maths" class="form-control mb-3" placeholder="Enter maths mark"
                value="{{ $studentMark->maths }}"/>
-
+        <label>Enter science mark : </label>
         <input type="number" min="0" name="science" class="form-control mb-3" placeholder="Enter science mark"
                value="{{ $studentMark->science }}"/>
-
+        <label>Enter history mark : </label>
         <input type="number" min="0" name="history" class="form-control mb-3" placeholder="Enter history mark"
                value="{{ $studentMark->history }}"/>
-
+        <label>Please select term : </label>
         <div class="col-sm-12 mb-3">
             <select class="form-control" id="selectUser" name="term_id" required focus>
                 <option value="" disabled selected>Please select term</option>

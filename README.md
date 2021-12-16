@@ -3,8 +3,7 @@
 ## student-management
 
 ### please run these commands : 
-
-- composer dump-autoload
+- composer install
 - php artisan migrate 
 - php artisan db:seed
 
