@@ -17,7 +17,7 @@ class CreateTeachersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('gender');
-            $table->integer('subject_id')->unsigned();
+            $table->integer('subject_id')->unsigned()->nullable();
             $table->timestamps();
         });
         Schema::table('teachers', function (Blueprint $table) {

@@ -18,7 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->integer('age');
             $table->string('gender');
-            $table->integer('reporting_teacher_id')->unsigned();
+            $table->integer('reporting_teacher_id')->unsigned()->nullable();
             $table->timestamps();
         });
         Schema::table('students', function (Blueprint $table) {

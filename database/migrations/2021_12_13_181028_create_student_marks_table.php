@@ -19,13 +19,15 @@ class CreateStudentMarksTable extends Migration
             $table->float('maths');
             $table->float('science');
             $table->float('history');
-            $table->integer('term_id')->unsigned();;
+            $table->integer('term_id')->unsigned()->nullable();
             $table->float('total_mark');
             $table->timestamps();
         });
         Schema::table('student_marks', function (Blueprint $table) {
-            $table->foreign('student_id')->references('id')->on('students');
-            $table->foreign('term_id')->references('id')->on('terms');
+            $table->foreign('student_id')->references('id')->on('students')
+                ->onDelete('cascade');;
+            $table->foreign('term_id')->references('id')->on('terms')
+                ->onDelete('set null');
         });
     }
 
